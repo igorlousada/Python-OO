@@ -1,10 +1,13 @@
 from teste import criar_conta,deposita,saca,extrato
+from conta import ContaCorrente
 
-conta = criar_conta(540,'Igor Lousada',50000,3000)
+conta = ContaCorrente(540,"IgorLousada",50000)
+conta1 = ContaCorrente(540,"IgorLousada",50000,3000)
 
-
-novo_deposito = deposita(conta,2    000)
-novo_saque = saca(conta,1000)
-
-novo_extrato = extrato(conta)
+conta.extrato()
+conta1.extrato()
+conta.deposita(1000)
+conta1.deposita(1000)
+conta.extrato()
+conta1.extrato()
 
