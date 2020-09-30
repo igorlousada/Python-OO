@@ -11,9 +11,14 @@ class ContaCorrente:
 
     def deposita(self,valor):
         self.__saldo += valor
-    
+    def __pode_saca(self,valor_a_sacar):
+        valor_disponivel = self.__limite + self.saldo
+        return valor_a_sacar <= valor_disponivel
     def saca(self,valor):
-        self.__saldo -= valor
+        if(self.__pode_saca(valor)):
+            self.__saldo -= valor
+        else:
+            print("limite ultrapassado")    
 
     def transfere(self,destino,valor):
         self.saca(valor)
