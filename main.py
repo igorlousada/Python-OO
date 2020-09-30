@@ -10,4 +10,7 @@ conta.deposita(1000)
 conta1.deposita(1000)
 conta.extrato()
 conta1.extrato()
+conta.transfere(conta1,4000)
+conta.extrato()
+conta1.extrato()
 
