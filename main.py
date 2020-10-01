@@ -15,4 +15,6 @@ conta.extrato()
 conta1.extrato()
 
 print(conta.limite)
+codigo = conta.codigo_banco()
+print(codigo['BB'])
 
